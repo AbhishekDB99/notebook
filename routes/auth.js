@@ -6,7 +6,7 @@ var bcrypt = require('bcryptjs');
 var jwt = require('jsonwebtoken');
 var fetchuser = require('../middleware/fetchuser');
 
-const JWT_SECRET = 'jsismid';
+const JWT_SECRET = process.env.SECRET ||  'jsismid';
 // ROUTE 1:To create a user endpoint: "/api/auth/createuser"
 router.post('/createuser',
   //For validaton

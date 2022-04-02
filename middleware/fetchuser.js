@@ -1,5 +1,5 @@
 var jwt = require('jsonwebtoken');
-const JWT_SECRET = 'jsismid';
+const JWT_SECRET = process.env.SECRET || 'jsismid';
 
 const fetchuser = (req, res, next) => {
     const token = req.header('auth-token');
